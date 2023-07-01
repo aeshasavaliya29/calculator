@@ -1,0 +1,67 @@
+* {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+}
+
+body {
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgb(128, 129, 132);
+}
+
+.container {
+          position: relative;
+          grid-column: span 4;
+}
+
+.container .content {
+          background: rgba(255, 255, 255, 0.1);
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.3);
+          backdrop-filter: blur(20px);
+}
+
+.container marquee{
+          font-size: 2em;
+          grid-column:  span 4;
+          color: #fefefd;
+}
+
+.container .content .result {
+          grid-column: span 4;
+          border: none;
+          height: 80px;
+          font-size: 20px;
+          padding-right: 15px;
+          text-align: right;
+          background: transparent;
+          color: white;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.container .content .number {
+          width: 70px;
+          height: 70px;
+          line-height: 70px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+          border-left:  1px solid rgba(255, 255, 255, 0.5);
+          border-right: 1px solid rgba(255, 255, 255, 0.5);
+          text-align: center;
+          color: white;
+          font-size: 20px;
+          transition: 0.2s;
+}
+
+.container .content .number:hover {
+          background: #fefefd;
+          color: black;
+}
+
+.container .content .clear {
+          grid-column: span 2;
+          width: 140px;
+}
